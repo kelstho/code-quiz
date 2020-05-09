@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Code Quiz</title>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <div class="row bg-warning justify-content-center p-3">
+    <h1>Code Quiz</h1>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center mt-3">
+      <div class="col-s12">
+        <button type="button" class="btn btn-success" id="start-button">Start</button>
+      </div>
+      <div class="col-s12 hide" id="questions">
+        <h3 id="question-title"></h3>
+        <div class="choices" id="choices"></div>
+      </div>
+      <div class="hide" id="end">
+        <div class="row mb-3">
+          <h2>Final Score: <span type="text" id="final"></span></h2>
+        </div>
+        <div class="row">
+          <h2>Initials: </h2>
+          <input type="text" id="initials" />
+          <button type="button" class="btn btn-success" id="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
