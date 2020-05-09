@@ -19,12 +19,21 @@
   </div>
   <div class="container">
     <div class="row justify-content-center mt-3">
-      <div class="col-s12">
-        <button type="button" class="btn btn-success" id="start-button">Start</button>
+      <div id="start">
+        <div class="col-s12">
+          <button type="button" class="btn btn-success" id="start">Start</button>
+        </div>
       </div>
-      <div class="col-s12 hide" id="questions">
-        <h3 id="question-title"></h3>
-        <div class="choices" id="choices"></div>
+      <div class="hide" id="game">
+        <div class="row">
+          <div class="timer-div"><span id="timer">0</span></div>
+        </div>
+        <div class="row">
+          <div class="col-s12" id="questions">
+            <h3 id="question-title"></h3>
+            <div class="choices" id="choices"></div>
+          </div>
+        </div>
       </div>
       <div class="hide" id="end">
         <div class="row mb-3">
