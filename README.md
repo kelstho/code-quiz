@@ -1,1 +1,2 @@
 # Code Quiz
+This web app allows the user to run through a series of quiz questions related to coding. If the player guesses wrong on a question, they will have 20 seconds subtracted from their time. If they run out of time, the game ends. Otherwise, the amount of time remaining at the end of the game becomes the final score. Deployed application: https://kelstho.github.io/code-quiz/
