@@ -18,5 +18,10 @@ var questions = [
     title: "Which language is the oldest?",
     choices: ["Javascript", "Python", "Ruby", "C"],
     answer: "C"
+  },
+  {
+    title: "Which of the following is an ORM?",
+    choices: ["Mongoose", "Panda", "Zebra", "Chicken"],
+    answer: "Mongoose"
   }
 ]
