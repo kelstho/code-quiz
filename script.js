@@ -1,16 +1,16 @@
-var iQ = 0;
-var remaining = 60;
-var start = document.getElementById("start");
-var timer = document.getElementById("timer");
-var questionsTitle = document.getElementById("questions");
-var choices = document.getElementById("choices");
-var startDiv = document.getElementById("start-div");
-var titleHeader = document.getElementById("question-title");
-var gameDiv = document.getElementById("game-div");
-var endDiv = document.getElementById("end-div");
-var finalScore = document.getElementById("final");
+let iQ = 0;
+let remaining = 60;
+let start = document.getElementById("start");
+let timer = document.getElementById("timer");
+let questionsTitle = document.getElementById("questions");
+let choices = document.getElementById("choices");
+let startDiv = document.getElementById("start-div");
+let titleHeader = document.getElementById("question-title");
+let gameDiv = document.getElementById("game-div");
+let endDiv = document.getElementById("end-div");
+let finalScore = document.getElementById("final");
 
-var timerStart;
+let timerStart;
 
 function increment() {
   remaining--;
@@ -18,17 +18,40 @@ function increment() {
 }
 
 function getQuestion() {
-  var cQ = questions[iQ];
+  let cQ = questions[iQ];
   titleHeader.textContent = cQ.title;
   choices.innerHTML = "";
   cQ.choices.forEach(function (choice, i) {
-    var selection = document.createElement("button");
+    let selection = document.createElement("button");
     selection.setAttribute("class", "btn btn-primary ml-2");
     selection.setAttribute("value", choice);
     selection.textContent = choice;
     selection.onclick = userSelection;
     choices.appendChild(selection);
   })
+}
+
+function userSelection() {
+  if (this.value != questions[iQ].answer) {
+    remaining -= 20;
+    timer.textContent = remaining;
+    if (remaining <= 0) {
+      endGame();
+    }
+  }
+  iQ++;
+  if (iQ === questions.length) {
+    endGame();
+  } else {
+    getQuestion();
+  }
+}
+
+function endGame() {
+  clearInterval(timerStart);
+  gameDiv.setAttribute("class", "hide");
+  endDiv.removeAttribute("class");
+  finalScore.textContent = remaining;
 }
 
 function init() {
