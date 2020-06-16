@@ -7,7 +7,7 @@ The user begins the game by clicking the 'start' button.
 Once the start button is clicked, a timer will begin a countdown from 60 and multiple choice questions will dynamically appear on the screen. The user must select the correct answers to each of the questions, or else they will be docked 20 seconds off the timer.
 ![Question 2](/screenshots/quiz3.png?raw=true)
 There are five questions the user must answer. Once an answer is selected, the next question will automatically appear on the screen.
-![Final Score](/screenshots/quiz.png?raw=true)
+![Final Score](/screenshots/quiz4.png?raw=true)
 If the timer runs out of time or enters negative numbers before all the questions have been answered, the quiz will end and the final score will be displayed. Otherwise, once the final question has been answered, the final score will be displayed. however many seconds remain at the end of the quiz is the final score. This score can be negative. The page can be refreshed to take the quiz again.
 
 ## Links
