@@ -8,7 +8,7 @@ Once the start button is clicked, a timer will begin a countdown from 60 and mul
 ![Question 2](/screenshots/quiz3.png?raw=true)
 There are five questions the user must answer. Once an answer is selected, the next question will automatically appear on the screen.
 ![Final Score](/screenshots/quiz4.png?raw=true)
-Once the final question has been answered, the final score will be displayed. however many seconds remain at the end of the quiz is the final score. This score can be negative. The page can be refreshed to take the quiz again.
+If the timer runs out of time or enters negative numbers before all the questions have been answered, the quiz will end and the final score will be displayed. Otherwise, once the final question has been answered, the final score will be displayed. however many seconds remain at the end of the quiz is the final score. This score can be negative. The page can be refreshed to take the quiz again.
 
 ## Links
 [Deployed Application](https://kelstho.github.io/code-quiz/)
