@@ -1,6 +1,7 @@
 let iQ = 0;
 let remaining = 60;
 let start = document.getElementById("start");
+let restart = document.getElementById("restart");
 let timer = document.getElementById("timer");
 let questionsTitle = document.getElementById("questions");
 let choices = document.getElementById("choices");
@@ -90,4 +91,15 @@ function init() {
   getQuestion();
 }
 
+function restartGame() {
+  endDiv.setAttribute("class", "hide");
+  gameDiv.removeAttribute("class");
+  iQ = 0;
+  remaining = 60;
+  timerStart = setInterval(increment, 1000);
+  timer.textContent = remaining;
+  getQuestion();
+}
+
 start.onclick = init;
+restart.onclick = restartGame;
